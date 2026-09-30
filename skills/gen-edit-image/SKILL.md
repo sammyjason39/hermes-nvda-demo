@@ -19,6 +19,9 @@ Related: `gen-image` makes a NEW image from text; this skill EDITS one the
 user already has. Never guess — if no image was provided, use this skill's
 Step 1 rule (ask for the image), do not fall back to `gen-image`.
 
+All logic lives in `scripts/edit_image.py`; `scripts/selfcheck.py` is the
+offline check. Never build workflow JSON by hand, never call ComfyUI directly.
+
 **Reply discipline (mandatory, small models):** every turn ≤5 short lines,
 ONE action per turn. No option tables, no emoji, no background notes (model
 names, paths, VRAM). This SKILL.md is the ONLY procedure. If the image path

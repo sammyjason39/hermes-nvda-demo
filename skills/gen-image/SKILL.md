@@ -14,6 +14,10 @@ metadata:
 Generate an image in **4 fixed steps, in order, mechanically**. Step 1 is
 extract-then-ask: never re-ask what the user already provided.
 
+All logic lives in `scripts/render_image.py` — the model only interviews and
+passes parameters. Never build workflow JSON by hand, never call ComfyUI
+directly.
+
 **Reply discipline (mandatory, small models):** every turn ≤5 short lines,
 ONE action per turn. Never output option tables, emoji decorations, or
 background notes (model names, paths, VRAM, "workflow patterns"). This
